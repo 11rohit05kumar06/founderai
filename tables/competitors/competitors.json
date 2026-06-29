@@ -1,0 +1,18 @@
+{
+  "name": "competitors",
+  "primary_key_column": "id",
+  "enable_rls": false,
+  "visibility": "POD",
+  "columns": [
+    { "name": "startup_id", "type": "UUID", "required": true,
+      "foreign_key": { "references": "startups.id" } },
+    { "name": "name", "type": "TEXT", "required": true, "max_length": 200 },
+    { "name": "description", "type": "TEXT", "required": false, "max_length": 1000 },
+    { "name": "strengths", "type": "TEXT", "required": false, "max_length": 1000 },
+    { "name": "weaknesses", "type": "TEXT", "required": false, "max_length": 1000 },
+    { "name": "url", "type": "TEXT", "required": false, "max_length": 500 },
+    { "name": "threat_level", "type": "ENUM", "required": true, "default": "medium",
+      "options": ["low", "medium", "high"] }
+  ],
+  "config": {}
+}

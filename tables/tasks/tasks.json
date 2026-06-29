@@ -1,0 +1,18 @@
+{
+  "name": "tasks",
+  "primary_key_column": "id",
+  "enable_rls": false,
+  "visibility": "POD",
+  "columns": [
+    { "name": "startup_id", "type": "UUID", "required": true,
+      "foreign_key": { "references": "startups.id" } },
+    { "name": "title", "type": "TEXT", "required": true, "max_length": 240 },
+    { "name": "description", "type": "TEXT", "required": false, "max_length": 2000 },
+    { "name": "assigned_to", "type": "TEXT", "required": false, "max_length": 100 },
+    { "name": "priority", "type": "ENUM", "required": true, "default": "medium",
+      "options": ["low", "medium", "high", "critical"] },
+    { "name": "status", "type": "ENUM", "required": true, "default": "todo",
+      "options": ["todo", "in_progress", "blocked", "done"] }
+  ],
+  "config": {}
+}

@@ -1,0 +1,18 @@
+{
+  "name": "startups",
+  "primary_key_column": "id",
+  "enable_rls": false,
+  "visibility": "POD",
+  "columns": [
+    { "name": "idea", "type": "TEXT", "required": true, "max_length": 1000 },
+    { "name": "name", "type": "TEXT", "required": false, "max_length": 120 },
+    { "name": "tagline", "type": "TEXT", "required": false, "max_length": 240 },
+    { "name": "mission", "type": "TEXT", "required": false, "max_length": 1000 },
+    { "name": "vision", "type": "TEXT", "required": false, "max_length": 1000 },
+    { "name": "target_audience", "type": "TEXT", "required": false, "max_length": 500 },
+    { "name": "value_proposition", "type": "TEXT", "required": false, "max_length": 1000 },
+    { "name": "stage", "type": "ENUM", "required": true, "default": "ideation",
+      "options": ["ideation", "validated", "branded", "designed", "building", "launched"] }
+  ],
+  "config": {}
+}

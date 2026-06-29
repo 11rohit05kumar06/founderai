@@ -1,0 +1,6 @@
+{
+  "name": "test-agent",
+  "description": "A minimal test agent.",
+  "instruction": { "$file": "instruction.md" },
+  "visibility": "POD"
+}
